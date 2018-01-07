@@ -1,6 +1,6 @@
 # ShoppingCart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5 and developed with Angular 5 .
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5 and developed with latest angular version `Angular 5` .
 
 It's a complete shopping cart project with the following functionalities :- 
 
