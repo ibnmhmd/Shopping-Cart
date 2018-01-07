@@ -178,7 +178,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
       this.showAddressSet = true ;
       const addressObject = this.addressInterface;
       localStorage.setItem('address', null);
-      this.addressMessage = 'Address Has Been Successfuly Set.';
+      this.addressMessage = 'Address has been successfully set.';
       setTimeout(() => {
         this.addressSet = false;
         this.firstName = '';
@@ -212,7 +212,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
   removeAddress() {
     localStorage.setItem('address', null);
     this.showAddressSet = false ;
-    this.addressMessage = 'Address Has Been Successfuly Removed.';
+    this.addressMessage = 'Address has been successfully removed.';
     this.addressSet = true;
     setTimeout(() => {
       this.addressSet = false;
