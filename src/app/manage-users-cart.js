@@ -33,10 +33,15 @@ getAllRegisteredUsers = () =>{
     }
 }
 
+calculateVAT= (cost) => {
+    const VAT = .05;
+    return cost*VAT;
+}
 module.exports =
 {
     getUserData ,
     isRegisteredUser,
     getCurrentUserByEmail,
-    getAllRegisteredUsers
+    getAllRegisteredUsers,
+    calculateVAT
 }

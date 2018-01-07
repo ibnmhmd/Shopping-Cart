@@ -9,6 +9,7 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AdminPageComponent } from './admin-page/admin-page.component'
 
 const routes: Routes = [
   {
@@ -48,6 +49,10 @@ const routes: Routes = [
   },{
     path: 'contact-us',
     component: ContactUsComponent
+  },
+  {
+    path: 'admin-panel',
+    component: AdminPageComponent
   }
 ];
 

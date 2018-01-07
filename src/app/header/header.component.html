@@ -6,7 +6,7 @@
         </div>
 
     <div class="navbar-header">
-      <a class="navbar-brand bold" routerLink = "/">Mini Shopping Cart</a>
+      <a class="navbar-brand bold" routerLink = "/">Shopping Cart</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="bold"> <a routerLink = "/"><span class="glyphicon glyphicon-home"> </span> Home</a></li>
@@ -106,8 +106,9 @@
               </li>
       </ng-container>
       <!-- ends -->
-      
-      
+      <ng-container *ngIf = "admin">
+      <li><a routerLink ='/admin-panel' ><span  routerLink ='/admin-panel' class="label label-danger admin"><i class="fa fa-unlock" aria-hidden="true"></i> YOU ARE ADMIN </span></a></li>
+     </ng-container>
       
       <!-- <li class="bold"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
       <li><span *ngIf ="counter>0" class="badge badge-success cartCounter" routerLink = "/cart-view">{{counter}}</span> <a routerLink = "/cart-view"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>

@@ -92,3 +92,11 @@
 {
         display: block;
 }
+.admin{
+    font-size: 90%;
+
+    &:hover{
+        cursor: pointer;
+        color: black;
+    }
+}

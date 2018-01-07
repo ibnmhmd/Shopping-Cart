@@ -4,7 +4,6 @@ import { ActivatedRoute, Router, NavigationStart, NavigationEnd } from '@angular
 import { Categories } from '../enum/categories.enum';
 import { ShoppingCategoryServiceService } from '../services/shopping-categories.service';
 declare var require: any;
-
 const cartModule = require('../add-item-to-cart.module');
 
 declare var $: any;

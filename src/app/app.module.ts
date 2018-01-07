@@ -20,6 +20,8 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AdminPanelComponent } from './partials/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ThankyouComponent,
     SignUpComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AdminPageComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,

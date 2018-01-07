@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import $ from 'jquery/dist/jquery';
+declare var $: any ;
 import { Console } from '@angular/core/src/console';
+import { ActivatedRoute, Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { EventEmiter } from '../interfaces/eventEmitter.interface';
 declare var require: any;
 const usersModule = require ('../manage-users-cart');
 @Component({
@@ -9,6 +11,7 @@ const usersModule = require ('../manage-users-cart');
   styleUrls: ['./cart-items.component.scss']
 })
 export class CartItemsComponent implements OnInit {
+  defaultEvent: EventEmiter =new EventEmiter();
   noItems: Boolean = false;
   itemRemoved: Boolean = false;
   itemsInCart: any = [];
@@ -18,7 +21,8 @@ export class CartItemsComponent implements OnInit {
   /*** VAT cost is 5% */
   private VAT = .05 ;
   calculatedVAT: Number = 0 ;
-  constructor() { }
+  constructor( private route: ActivatedRoute,
+    private router: Router) { }
 
   /************ setv value ******/
   setCalculation() {
@@ -88,8 +92,8 @@ export class CartItemsComponent implements OnInit {
         Object.keys(this.itemsInCart).map((key, value) => {
         this.cost += (this.itemsInCart[value].price * this.itemsInCart[value].quantity);
       });
-
-      this.grandTotal = this.cost + this.calculateVAT(this.cost);
+      this.calculatedVAT = usersModule.calculateVAT(this.cost);
+      this.grandTotal = this.cost + this.calculatedVAT;
       localStorage.setItem('grandTotal', (String)(this.grandTotal));
       localStorage.setItem('VAT', (String)(this.calculatedVAT));
     }else {
@@ -110,7 +114,33 @@ export class CartItemsComponent implements OnInit {
   }
   /***************ends ***************/
   ngOnInit() {
+    window.scroll(0, 0);
     this.extractItems();
+    this.defaultEvent.userMode = '';
+  }
+
+  /******************** check out options ******/
+  checkOutOptions() {
+    if(!usersModule.isRegisteredUser()) {
+      $('#checkOutOption').modal('show');
+    }else {
+      this.router.navigate(['/secure-checkout']);
+    }
+   
+  }
+  //******************* ends **************/
+
+  //*************** sign in **************/
+  signIn() {
+    window.scroll(0, 0);
+    localStorage.setItem('userMode', 'Returning');
+    $('.userPanel').click();
+    $('#checkOutOption').modal('hide');
+  }
+
+  /**************** close pop up ******/
+  shutPop() {
+    $('#checkOutOption').modal('hide');
   }
 
 }

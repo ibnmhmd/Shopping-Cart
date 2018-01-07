@@ -9,7 +9,7 @@
                         </div>
                         <a *ngIf="noItems" class="btn btn-block btn-warning" routerLink = '/'>Shop Now</a>
                         <div *ngIf="itemRemoved" class="alert alert-success">
-                            <strong>Item Has Been Successfuly Removed From The Cart.</strong>
+                            <strong>Item has been successfully removed from the cart.</strong>
                         </div>
 
                     <div class="row media" *ngFor ="let item of itemsInCart">
@@ -43,7 +43,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"><span>VAT (5%):</span><span class="result"> AED {{calculatedVAT}}</span></div>
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"><span>Grand Total :</span><span class="result">{{grandTotal}}</span> </div>
                         <!-- checkout button -->
-                        <div class="col-xs-12 checkout"><a class="btn btn-block btn-warning " routerLink = "/secure-checkout"><i class="fa fa-lock" aria-hidden="true"></i> Secure Checkout</a></div>
+                        <div class="col-xs-12 checkout"><a class="btn btn-block btn-warning " (click) ="checkOutOptions()"><i class="fa fa-lock" aria-hidden="true"></i> Secure Checkout</a></div>
                         <!-- checkout button ends -->
                     </div>
                     <!-- info ends -->
@@ -52,3 +52,39 @@
           
        </div>
    </section>
+
+     <!-- Modal -->
+<div class="modal fade " id="checkOutOption" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel"> Check out options
+            <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </h4>
+          
+        </div>
+        <div class="modal-body">
+              <div class="row">
+                   <div class="col-xs-12">                        
+                  </div>
+                   <div class="col-xs-12 col-sm-12 col-md-6">
+                    <h4 class="text-center">Returning user ?</h4>
+                    <a (click) ="signIn()" class="btn btn-block btn-warning optionBtn"> <span class="glyphicon glyphicon-log-in" id="log"></span>Sign in and checkout</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6">
+                    <h4 class="text-center">Guest ?</h4>
+                     <a routerLink = "/secure-checkout" (click) ="shutPop()" class="btn btn-block btn-warning optionBtn"><i class="fa fa-lock" aria-hidden="true"  id="log"></i> Checkout as a guest</a>     
+                  </div>      
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- ends -->
+  
