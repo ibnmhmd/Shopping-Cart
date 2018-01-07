@@ -8,7 +8,7 @@
           "router": "mak-book",
           "img": "https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/big/iphone6.jpg",
           "thumbnail_img":"https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/small/iphone6.jpg",
-           "price": 6000,
+           "price": 1350,
            "quantity": 8,
            "category": "electronics"
       },
@@ -19,7 +19,7 @@
           "router": "mak-book",
           "img": "https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/big/note4.jpg",
           "thumbnail_img":"https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/small/note4.jpg",
-           "price": 6000,
+           "price": 3000,
            "quantity": 8,
            "category": "electronics"
       },
@@ -30,7 +30,7 @@
           "router": "mak-book",
           "img": "https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/big/samsung.jpg",
           "thumbnail_img":"https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/small/samsung.jpg",
-           "price": 6000,
+           "price": 1700,
            "quantity": 8,
            "category": "electronics"
       },
@@ -38,10 +38,10 @@
          "guid": "EL-XMD013",
           "cat_id": 7,
           "cat_title": "Sony Camera",
-          "router": "mak-book",
+          "router": "sony camera",
           "img": "https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/big/son.jpg",
           "thumbnail_img":"https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/small/son.jpg",
-           "price": 6000,
+           "price": 2500,
            "quantity": 8,
            "category": "electronics"
       },
@@ -74,7 +74,7 @@
           "router": "mak-book",
           "img": "https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/big/sony-camera.jpg",
           "thumbnail_img":"https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/small/sony-camera.jpg",
-           "price": 6000,
+           "price": 3500,
            "quantity": 8,
            "category": "electronics"
       },
@@ -85,7 +85,7 @@
           "router": "mak-book",
           "img": "https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/small/camera.jpg",
           "thumbnail_img":"https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/big/camera.jpg",
-           "price": 6000,
+           "price": 2000,
            "quantity": 8,
            "category": "electronics"
       },
@@ -96,7 +96,7 @@
           "router": "mak-book",
           "img": "https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/big/mac.jpg",
           "thumbnail_img":"https://ibnmhmd.github.io/Shopping-Cart/assets/img/recommendations/small/mac.jpg",
-           "price": 6000,
+           "price": 5800,
            "quantity": 8,
            "category": "electronics"
       }
