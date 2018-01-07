@@ -16,6 +16,7 @@ It's a complete shopping cart project with the following functionalities :-
 ## Quick start
 
 Clone the project and run `npm install` .
+Similarly you can see the live version here `https://ibnmhmd.github.io/Shopping-Cart`
 
 ## Development server
 
