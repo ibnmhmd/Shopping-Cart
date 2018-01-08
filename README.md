@@ -12,6 +12,7 @@ It's a complete shopping cart project with the following functionalities :-
 - User can set shipping address and checkout (place order of) items in the cart.
 - User can register and log in and manage his/her cart.
 - Contact us and about us page.
+- User can checkout as a guest or sign in to his/her account if registered and automatically converts the items to their cart and place order.
 
 ## Quick start
 
