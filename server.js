@@ -5,15 +5,9 @@ const port = 3000;
 const baseUrl = `http://localhost:${port}`;
 const app = express();
 
-app.set('view engine', 'html');
-app.set('views', './dist');
 app.use(express.static(path.join(__dirname, './dist'), {index: false}));
-//app.use('/', express.static('./', {index: false}));
-app.get('/*', (req, res) => {
-  res.render('index', {
-    req,
-    res
-  });
+app.get('/*', function(req,res) {   
+res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
