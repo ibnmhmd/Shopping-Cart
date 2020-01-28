@@ -31,7 +31,8 @@
     "jquery": "^3.2.1",
     "rxjs": "^5.5.2",
     "simple-crypto-js": "^1.1.1",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "node-sass": "^4.9.0"
   },
   "devDependencies": {
     "@angular/cli": "1.5.5",
@@ -53,8 +54,7 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.4.2",
-    "node-sass": "^4.3.0"
+    "typescript": "~2.4.2"
   },  
   "engines": {
     "node": "12.14.1",
