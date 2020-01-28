@@ -5,12 +5,15 @@ const port = 3000;
 const baseUrl = `http://localhost:${port}`;
 const app = express();
 
-// Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/<name-of-app>'));
-
-app.get('/*', function(req,res) {
-    
-res.sendFile(path.join(__dirname+'/dist/index.html'));
+app.set('view engine', 'html');
+app.set('views', './dist');
+app.use(express.static(path.join(__dirname, './dist'), {index: false}));
+//app.use('/', express.static('./', {index: false}));
+app.get('/*', (req, res) => {
+  res.render('index', {
+    req,
+    res
+  });
 });
 
 // Start the app by listening on the default Heroku port
